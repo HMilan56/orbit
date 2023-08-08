@@ -96,12 +96,6 @@ const SUNSIZE = 200;
 const SUNPOS = MAPSIZE / 2;
 const TICKSPEED = 1;
 
-canvas.width = MAPSIZE;
-canvas.height = MAPSIZE;
-
-ctx.fillStyle = "black";
-ctx.fillRect(0, 0, MAPSIZE, MAPSIZE);
-
 let timeOutId: number | null = null;
 const sun = new Star(SUNPOS, SUNPOS, SUNSIZE);
 
@@ -126,6 +120,12 @@ function tick() {
 }
 
 window.onload = () => {
+    canvas.width = MAPSIZE;
+    canvas.height = MAPSIZE;
+
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, MAPSIZE, MAPSIZE);
+
     p1.setSpeedDeg(0.5);
     p2.setSpeedDeg(0.3);
     p3.setSpeedDeg(0.1);
